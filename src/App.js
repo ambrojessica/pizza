@@ -1,25 +1,81 @@
-import logo from './logo.svg';
-import './App.css';
+import axios from 'axios';
+import React, { useState } from 'react';
+//import
+import { Link, Route, Switch } from 'react-router-dom';
+import Home from './components/Home';
+import Pizza from './components/Pizza';
+import schema from './components/formSchema';
+import * as yup from 'yup';
+import './components/PrettyPizza.css';
 
-function App() {
+
+const intialFormValues = {
+  name: '',
+  size: '',
+  sauce: '',
+  toppings: false,
+  instructions: '',
+};
+
+const formErrors = {
+  name: '',
+  size: '',
+  sauce: '',
+  instructions: ''
+};
+
+const App = () => {
+
+  const [formValues, setFormValues] = useState(intialFormValues);
+  const [errors, setErrors] = useState(formErrors);
+
+  const onChange = (name, value) => {
+    validate(name, value);
+    setFormValues({ ...formValues, [name]: value });
+  };
+
+  const onSubmit = () => {
+    axios.post('https://reqres.in/api/orders', formValues)
+      .then(res => {
+        console.log(res);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
+
+  const validate = (name, value) => {
+    yup.reach(schema, name)
+      .validate(value)
+      .then(() => setErrors({ ...errors, [name]: '' }))
+      .catch(err => setErrors({ ...errors, [name]: err.errors[0] }));
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <nav>
+        <h1>Fiesta Pizza!</h1>
+        <div className="nav-button">
+          <Link to="/">Home</Link>
+        </div>
+      </nav>
+
+      <Switch>
+        <Route path="/pizza">
+          <Pizza
+            values={formValues}
+            change={onChange}
+            errors={errors}
+            submit={onSubmit}
+          />
+        </Route>
+
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+
     </div>
   );
-}
-
+};
 export default App;

@@ -1,0 +1,114 @@
+body {
+  background-color: #f0efeb;
+}
+
+h1 {
+  font-size: 35px;
+  color: #9b2226;
+  text-align: center;
+}
+
+.nav-button {
+  text-decoration: none;
+  color: #ca6702;
+  text-align: center;
+  padding-bottom: 2em;
+}
+
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  height: 60vh;
+  background-image: url('https://images.unsplash.com/photo-1513104890138-7c749659a591?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1770&q=80');
+  background-size: cover;
+	background-position: center ;
+	background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.intro h2 {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:aliceblue;
+  background-color: rgba(151, 151, 151, 0.3);
+}
+
+.intro button {
+  width: 10%;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-logo {
+  display: flex;
+  justify-content: center;
+  padding: 3em 0;
+}
+
+.container-logo h3 {
+  padding: 1em;
+  color: #252422;
+  background-color: rgba(245, 230, 39, 0.19);
+}
+
+.logo1 {
+  margin-right: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 35vh;
+  background-image: url('https://images.unsplash.com/photo-1597339349587-b07760c07520?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1770&q=80');
+  background-size: cover;
+	background-position: center;
+  background-repeat: no-repeat;
+}
+
+.logo2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 35vh;
+  background-image: url('https://images.unsplash.com/photo-1544880047-1966fc792a37?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80');
+  background-size: cover;
+	background-position: center;
+  background-repeat: no-repeat;
+}
+
+.logo3 {
+  margin-left: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 35vh;
+  background-image: url('https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1776&q=80');
+  background-size: cover;
+	background-position: center;
+  background-repeat: no-repeat;
+}
+
+.title img {
+  width: 40%;
+  height: 60vh;
+}
+
+form{
+  text-align: center;
+}
+
+.name, .size, .sauce, .toppings, .instructions, button {
+  padding: 2%;
+  color: #9b2226;
+}
+
+
+
