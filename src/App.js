@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 //import
 import { Link, Route, Switch } from 'react-router-dom';
 import Home from './components/Home';
@@ -17,7 +17,7 @@ const initialFormValues = {
   pepperoni: false,
   sausage: false,
   ham: false,
-  ['Canadian Bacon']: false,
+  ['canadian Bacon']: false,
   pineapple: false,
   mushroom: false,
   instructions: '',
