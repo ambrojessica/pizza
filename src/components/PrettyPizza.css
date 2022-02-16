@@ -105,10 +105,95 @@ form{
   text-align: center;
 }
 
-.name, .size, .sauce, .toppings, .instructions, button {
+.name, .size, .sauce, .toppings, .instructions, .top-page a, button {
   padding: 2%;
   color: #9b2226;
 }
 
+/* form */
+.toppings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+flex-direction: column;  
+}
+
+.toppingIndex {
+  width: 13%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+flex-direction: row;
+}
+
+.add-cart {
+  margin: 3rem 0;
+}
+
+.top-page a {
+  text-decoration: none;
+}
+
+/* submit page */
+.submitPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.submitPage img {
+  width: 30%;
+  height: 23em;
+}
+
+
+/* mobile responsive at 500px */
+@media (max-width: 500px) {
+  /*home */
+  .intro button {
+    padding: 6%;
+  }
+
+  .container-logo {
+    margin-left: 5em;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .logo1, .logo2, .logo3 {
+    width: 20em;
+  }
+
+  .logo3 {
+    margin: 0;
+  }
+
+  /*form */
+  .title img {
+    width: 30em;
+  }
+
+  .instructions {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .instructions input {
+    width: 20em;
+    margin-left: 8em;
+  }
+
+  /* submitted page */
+  .submitPage h2 {
+    text-align: center;
+  }
+
+  .submitPage img {
+    width: 17em;
+    height: 20em;
+  }
+}
 
 

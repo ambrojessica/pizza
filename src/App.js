@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 //import
 import { Link, Route, Switch } from 'react-router-dom';
 import Home from './components/Home';
@@ -7,13 +7,19 @@ import Pizza from './components/Pizza';
 import schema from './components/formSchema';
 import * as yup from 'yup';
 import './components/PrettyPizza.css';
+import SubmitPage from './components/SubmitPage';
 
 
-const intialFormValues = {
+const initialFormValues = {
   name: '',
   size: '',
   sauce: '',
-  toppings: false,
+  pepperoni: false,
+  sausage: false,
+  ham: false,
+  ['Canadian Bacon']: false,
+  pineapple: false,
+  mushroom: false,
   instructions: '',
 };
 
@@ -26,7 +32,7 @@ const formErrors = {
 
 const App = () => {
 
-  const [formValues, setFormValues] = useState(intialFormValues);
+  const [formValues, setFormValues] = useState(initialFormValues);
   const [errors, setErrors] = useState(formErrors);
 
   const onChange = (name, value) => {
@@ -61,6 +67,11 @@ const App = () => {
       </nav>
 
       <Switch>
+        <Route path="/submit">
+          <SubmitPage
+          />
+        </Route>
+
         <Route path="/pizza">
           <Pizza
             values={formValues}

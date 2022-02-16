@@ -1,11 +1,13 @@
 import React from 'react';
 import './PrettyPizza.css';
+import { useHistory } from 'react-router-dom';
 
 const PizzaForm = (props) => {
 
   //const
   const { change, submit, values, errors } = props;
   const { name, size, instructions } = props.values;
+  const history = useHistory();
 
   const onChange = evt => {
     const { name, value, checked, type } = evt.target;
@@ -16,6 +18,7 @@ const PizzaForm = (props) => {
   const onSubmit = evt => {
     evt.preventDefault();
     submit();
+    history.push('/submit');
   };
 
   return (
@@ -43,23 +46,22 @@ const PizzaForm = (props) => {
 
         {/* size */}
         <div className='size' id='size-dropdown'>
-          <label>Start with a Size:
-            <select
-              onChange={onChange}
-              value={size}
-              name='size'
-            >
-              <option value=''>Select a Size</option>
-              <option value='small'>Small - 4 Slices</option>
-              <option value='medium'>Medium - 8 Slices </option>
-              <option value='large'>Large - 12 Slices</option>
-            </select>
-          </label>
+          <label>Start with a Size:</label>
+          <select
+            onChange={onChange}
+            value={size}
+            name='size'
+          >
+            <option value=''>Select a Size</option>
+            <option value='small'>Small - 4 Slices</option>
+            <option value='medium'>Medium - 8 Slices </option>
+            <option value='large'>Large - 12 Slices</option>
+          </select>
         </div>
 
         {/* sauce */}
         <div className='sauce'>
-          <label>Original Red
+          <div className='sauce-flex'>
             <input
               type='radio'
               name='sauce'
@@ -67,8 +69,10 @@ const PizzaForm = (props) => {
               onChange={onChange}
               checked={values.sauce === 'original red'}
             />
-          </label>
-          <label>BBQ Sauce
+            <label>Original Red</label>
+          </div>
+
+          <div className='sauce-flex'>
             <input
               type='radio'
               name='sauce'
@@ -76,8 +80,10 @@ const PizzaForm = (props) => {
               onChange={onChange}
               checked={values.sauce === 'bbq sauce'}
             />
-          </label>
-          <label>Garlic Ranch
+            <label>BBQ Sauce</label>
+          </div>
+
+          <div className='sauce-flex'>
             <input
               type='radio'
               name='sauce'
@@ -85,8 +91,10 @@ const PizzaForm = (props) => {
               onChange={onChange}
               checked={values.sauce === 'garlic ranch'}
             />
-          </label>
-          <label>Spinach Alfredo
+            <label>Garlic Ranch</label>
+          </div>
+
+          <div className='sauce-flex'>
             <input
               type='radio'
               name='sauce'
@@ -94,77 +102,94 @@ const PizzaForm = (props) => {
               onChange={onChange}
               checked={values.sauce === 'spinach alfredo'}
             />
-          </label>
+            <label>Spinach Alfredo</label>
+          </div>
         </div>
 
         {/*toppings*/}
         <div className='toppings'>
-          <label>Pepperoni
+          <div className='toppingIndex'>
             <input
               type='checkbox'
               name='pepperoni'
               onChange={onChange}
               checked={values.pepperoni}
             />
-          </label>
-          <label>Sausage
+            <label>Pepperoni</label>
+          </div>
+
+          <div className='toppingIndex'>
             <input
               type='checkbox'
-              name='Sausage'
+              name='sausage'
               onChange={onChange}
               checked={values.sausage}
             />
-          </label>
-          <label>Ham
+            <label>Sausage</label>
+          </div>
+
+          <div className='toppingIndex'>
             <input
               type='checkbox'
               name='ham'
               onChange={onChange}
               checked={values.ham}
             />
-          </label>
-          <label>Canadian Bacon
+            <label>Ham</label>
+          </div>
+
+          <div className='toppingIndex'>
             <input
               type='checkbox'
               name='canadian bacon'
               onChange={onChange}
               checked={values['canadian bacon']}
             />
-          </label>
-          <label>Pineapple
+            <label>Canadian Bacon</label>
+          </div>
+
+          <div className='toppingIndex'>
             <input
               type='checkbox'
               name='pineapple'
               onChange={onChange}
               checked={values.pineapple}
             />
-          </label>
-          <label>Mushrooms
+            <label>Pineapple</label>
+          </div>
+
+          <div className='toppingIndex'>
             <input
               type='checkbox'
               name='mushrooms'
               onChange={onChange}
               checked={values.mushroom}
             />
-          </label>
+            <label>Mushrooms</label>
+          </div>
+
         </div>
 
         {/* special instructions */}
         <div className='instructions' id='special-text'>
-          <label>Any Special Instructions:
-            <input
-              value={instructions}
-              type='text'
-              name='instructions'
-              onChange={onChange}
-            />
-          </label>
+          <label>Any Special Instructions:</label>
+          <input
+            value={instructions}
+            placeholder="Feeling spicy?"
+            type='text'
+            name='instructions'
+            onChange={onChange}
+          />
         </div>
 
         {/* button */}
-        <button>Add to Cart 🛒</button>
+        <button onClick={onSubmit} type='submit' className='add-cart'>Add to Cart 🛒</button>
+
+        <div className='top-page'>
+          <a href='#'>Back To Top</a>
+        </div>
       </div>
-    </form>
+    </form >
   );
 
 };
