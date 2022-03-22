@@ -20,7 +20,7 @@ const formSchema = yup.object().shape({
   ham: yup.boolean(),
   ['canadian bacon']: yup.boolean(),
   pineapple: yup.boolean(),
-  mushrooms: yup.boolean(),
+  mushroom: yup.boolean(),
 
   instructions: yup
     .string()

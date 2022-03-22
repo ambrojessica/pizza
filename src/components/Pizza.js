@@ -18,7 +18,7 @@ const PizzaForm = (props) => {
   const onSubmit = evt => {
     evt.preventDefault();
     submit();
-    history.push('/submit');
+    history.push('/cart');
   };
 
   return (
@@ -46,7 +46,7 @@ const PizzaForm = (props) => {
 
         {/* size */}
         <div className='size' id='size-dropdown'>
-          <label>Start with a Size:</label>
+          <label>Start with a <strong>Size:</strong></label>
           <select
             onChange={onChange}
             value={size}
@@ -61,6 +61,7 @@ const PizzaForm = (props) => {
 
         {/* sauce */}
         <div className='sauce'>
+          <h3>Sauce:</h3>
           <div className='sauce-flex'>
             <input
               type='radio'
@@ -108,6 +109,7 @@ const PizzaForm = (props) => {
 
         {/*toppings*/}
         <div className='toppings'>
+          <h3>Toppings:</h3>
           <div className='toppingIndex'>
             <input
               type='checkbox'
@@ -161,7 +163,7 @@ const PizzaForm = (props) => {
           <div className='toppingIndex'>
             <input
               type='checkbox'
-              name='mushrooms'
+              name='mushroom'
               onChange={onChange}
               checked={values.mushroom}
             />

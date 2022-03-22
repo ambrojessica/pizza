@@ -8,6 +8,7 @@ import schema from './components/formSchema';
 import * as yup from 'yup';
 import './components/PrettyPizza.css';
 import SubmitPage from './components/SubmitPage';
+import Cart from './components/Cart';
 
 
 const initialFormValues = {
@@ -70,6 +71,10 @@ const App = () => {
         <Route path="/submit">
           <SubmitPage
           />
+        </Route>
+
+        <Route path="/cart">
+          <Cart />
         </Route>
 
         <Route path="/pizza">
