@@ -2,7 +2,9 @@
 
 This is a mock pizza site. 
 
+🍕🍕
 ### Fill out the form and order a pizza!
+🍕🍕
 
 ## What languages?
 HTML, CSS, JavaScript and React!
