@@ -33,8 +33,13 @@ const formErrors = {
 
 const App = () => {
 
+  // const [cart, setCart] = useState([]);
   const [formValues, setFormValues] = useState(initialFormValues);
   const [errors, setErrors] = useState(formErrors);
+
+  // const addToCart = (price) => {
+  //   setCart([...cart, price]);
+  // };
 
   const onChange = (name, value) => {
     validate(name, value);
@@ -79,6 +84,7 @@ const App = () => {
 
         <Route path="/pizza">
           <Pizza
+            // addToCart={addToCart}
             values={formValues}
             change={onChange}
             errors={errors}

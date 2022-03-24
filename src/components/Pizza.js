@@ -109,7 +109,7 @@ const PizzaForm = (props) => {
 
         {/*toppings*/}
         <div className='toppings'>
-          <h3>Toppings:</h3>
+          <h3>Pick as many <strong>Toppings:</strong></h3>
           <div className='toppingIndex'>
             <input
               type='checkbox'
