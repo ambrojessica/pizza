@@ -2,16 +2,20 @@ body {
   background-color: #f0efeb;
 }
 
-h1 {
+nav h1 {
   font-size: 35px;
   color: #9b2226;
   text-align: center;
 }
 
-.nav-button {
+nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nav-button Link{
   text-decoration: none;
   color: #ca6702;
-  text-align: center;
   padding-bottom: 2em;
 }
 

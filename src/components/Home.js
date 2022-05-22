@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './PrettyPizza.css';
 import { useHistory } from 'react-router-dom';
 
@@ -14,6 +15,13 @@ const Home = () => {
 
   return (
     <div className='Home'>
+      <nav>
+        <h1>Fiesta Pizza</h1>
+        <div className="nav-button">
+          <Link to="/">Home</Link>
+          <Link to="/cart">Cart</Link>
+        </div>
+      </nav>
       <div className='intro'>
         <h2>Get a pizza delivered while coding</h2>
         <button onClick={routeToForm} id='order-pizza'>Order Pizza!</button>
