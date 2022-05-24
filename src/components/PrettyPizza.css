@@ -2,21 +2,24 @@
 
 body {
   background-color: #f0efeb;
+  color: #9b2226;
   font-family: 'Inter', sans-serif;
 }
 
 nav h1 {
-  font-size: 35px;
   color: #9b2226;
+  font-size: 35px;
   text-align: center;
   text-decoration: none;
-  }
+}
 
 nav {
+  text-decoration: none;
+  height: 12vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-color: rgba(244, 99, 58, 0.25);
+  background-color: rgba(194, 130, 14, 0.14);
 }
 
 .nav-button {
@@ -27,15 +30,24 @@ nav {
   padding-bottom: 2em;
 }
 
+.nav-button p {
+  font-size: 1.5em;
+  margin-right: 65%;
+  padding-top: 1%;
+}
+
 .shoppingCart {
-  width: 100%;
-  height: 7vh;
+  border: 1px solid black;
   color: #9b2226;
-  margin-top: 40%;
+  width: 100%;
+  height: 6vh;
+  margin-top: 60%;
+  padding-right: 5%;
 }
 
 /*slideshow */
 .slider {
+  margin-top: 2.5em;
   position: relative;
   display: flex;
   justify-content: center;
@@ -44,7 +56,7 @@ nav {
 
 .image {
   width: 850px;
-  height: 450px;
+  height: 475px;
   border-radius: 10px;
 }
 
@@ -90,12 +102,11 @@ nav {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  color: #9b2226;
 }
 
 .story-section h3 {
   font-size: 3em;
-  margin: 1rem;
+  margin: 1.5rem;
 }
 
 .story-section p {
@@ -104,51 +115,38 @@ nav {
   margin-bottom: 2rem;
 }
 
-/* form */
-form{
-  text-align: center;
-}
-
-.name, .size, .sauce, .toppings, .instructions, .top-page a, button {
-  padding: 2%;
+.Home button {
+  padding: 2em;
+  border-radius: 20%;
   color: #9b2226;
 }
 
-/* form */
-.toppings {
+.Home button:hover {
+  padding: 3em;
+  border-radius: 20%;
+  background-color: rgba(244, 116, 55, 0.8);
+}
+
+
+/* footer */
+.footer-info nav {
+  margin-top: 5em;
+  padding: 1em;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-flex-direction: column;  
 }
 
-.toppingIndex {
-  width: 13%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-flex-direction: row;
-}
-
-.add-cart {
-  margin: 3rem 0;
-}
-
-.top-page a {
-  text-decoration: none;
-}
-
-/* submit page */
-.submitPage {
+.nav-info {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
 }
 
-.submitPage img {
-  width: 30%;
-  height: 23em;
+.footer-info img {
+  width: 20%;
 }
 
 
