@@ -117,7 +117,7 @@ nav {
 
 .Home button {
   padding: 2em;
-  border-radius: 20%;
+  border-radius: 30%;
   color: #9b2226;
 }
 
@@ -127,6 +127,33 @@ nav {
   background-color: rgba(244, 116, 55, 0.8);
 }
 
+/* displaying the menu */
+.pizzaInfo {
+  border: 2px solid orange;
+  display: flex;
+  justify-content: center;
+  text-align: center;  
+  align-items: center;
+}
+
+.pizzaCard {
+  border: 1px solid palegreen;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.testing {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pizzaCard img {
+  width: 80%;
+  height: 40vh;
+}
 
 /* footer */
 .footer-info nav {
