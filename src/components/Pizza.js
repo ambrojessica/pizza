@@ -5,17 +5,19 @@ import Footer from "./Footer";
 
 const Pizza = () => {
   return (
-    <div>
+    <section>
       <Header />
-      <div className="pizzaInfo">
-        {
-          pizzaData.map((item) => (
-            <DisplayPizza key={item} item={item} />
-          ))
-        }
+      <div className="pizzaContainer">
+        <div className="pizzaInfo">
+          {
+            pizzaData.map((item) => (
+              <DisplayPizza key={item} item={item} />
+            ))
+          }
+        </div>
       </div>
       <Footer />
-    </div>
+    </section>
   );
 };
 
@@ -29,7 +31,7 @@ const DisplayPizza = ({ item }) => {
         <img src={image} alt="images of pizza" />
         <h3>{name}</h3>
         <h5>{description}</h5>
-        <p>{price}</p>
+        <span>{price}</span>
       </div>
     </div>
 

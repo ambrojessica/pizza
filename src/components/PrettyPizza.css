@@ -105,14 +105,14 @@ nav {
 
 .story-section h3 {
   font-size: 2.5em;
-  margin-top: 2rem;
+  margin-top: 2em;
 }
 
 .story-section p {
   width: 75%;
   font-size: 1.2em;
   margin-top: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 2em;
 }
 
 .Home button {
@@ -128,36 +128,45 @@ nav {
 }
 
 /* displaying the menu */
-.pizzaInfo {
-  border: 2px solid orange;
+.pizzaContainer {
   display: flex;
   justify-content: center;
   text-align: center;  
   align-items: center;
+  flex-direction: column;
+}
+
+.pizzaInfo {
+  margin: 2em;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .pizzaCard {
-  border: 1px solid palegreen;
-  width: 60%;
+  border: 2px solid rgba(186, 186, 186, 0.49);
+  border-radius: 2em;
+  width: 25%;
+  padding: 1em;
+  margin-bottom: 1em;
   display: flex;
   align-items: center;
-  flex-direction: column;
-  flex-wrap: wrap;
 }
 
-.testing {
-  display: flex;
-  flex-wrap: wrap;
+.pizzaCard:hover {
+  box-shadow: 20px 20px 50px grey;
 }
 
 .pizzaCard img {
-  width: 80%;
+  width: 95%;
   height: 40vh;
+  border-radius: 2em;
 }
 
 /* footer */
 .footer-info nav {
-  margin-top: 5em;
+  margin-top: 3em;
   padding: 1em;
   display: flex;
   justify-content: space-evenly;
