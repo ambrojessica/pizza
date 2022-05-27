@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
 
 body {
   background-color: #f0efeb;
   color: #9b2226;
-  font-family: 'Inter', sans-serif;
+  font-family: 'PT Serif', serif;
 }
 
 nav h1 {
@@ -11,37 +11,31 @@ nav h1 {
   font-size: 35px;
   text-align: center;
   text-decoration: none;
+  margin-right: 1e,;
 }
 
 nav {
   text-decoration: none;
-  height: 12vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-color: rgba(194, 130, 14, 0.14);
 }
 
 .nav-button {
+  background-color: rgba(17, 16, 16, 0.88);
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  color: #ca6702;
-  padding-bottom: 2em;
-}
-
-.nav-button p {
-  font-size: 1.5em;
-  margin-right: 65%;
-  padding-top: 1%;
+  justify-content: space-evenly;
 }
 
 .shoppingCart {
   color: #9b2226;
   width: 100%;
   height: 6vh;
-  margin-top: 60%;
-  padding-right: 5%;
+}
+
+.shoppingCart, .nav-button h3 {
+  margin-top: 2em;
 }
 
 /*slideshow */
@@ -105,7 +99,7 @@ nav {
 
 .story-section h3 {
   font-size: 2.5em;
-  margin-top: 2em;
+  margin-top: 1.2em;
 }
 
 .story-section p {
@@ -165,12 +159,14 @@ nav {
 }
 
 /* footer */
-.footer-info nav {
+.footer-info nav{
+  background-color: rgba(17, 16, 16, 0.88);
   margin-top: 3em;
   padding: 1em;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  text-decoration: none;
 }
 
 .nav-info {

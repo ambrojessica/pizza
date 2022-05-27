@@ -8,8 +8,8 @@ const Header = () => {
     <div>
       <nav>
         <div className="nav-button">
-          <Link to="/"><h1>Fiesta Pizza</h1></Link>
-          <p>(888)-888-8888</p>
+          <h3>(123)-456-8888</h3>
+          <Link to="/"><h1>Just Pizza</h1></Link>
           <Link to="/cart"><FaCartPlus className='shoppingCart' /></Link>
         </div>
       </nav>
