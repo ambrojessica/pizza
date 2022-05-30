@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { NavLink } from 'react-router-dom';
 import './PrettyPizza.css';
 import { FaCartPlus } from 'react-icons/fa';
 
@@ -9,8 +9,9 @@ const Header = () => {
       <nav>
         <div className="nav-button">
           <h3>(123)-456-8888</h3>
-          <Link to="/"><h1>Just Pizza</h1></Link>
-          <Link to="/cart"><FaCartPlus className='shoppingCart' /></Link>
+          <NavLink to="/"><h1>Just Pizza</h1></NavLink>
+          <NavLink to="/cart"><FaCartPlus className='shoppingCart' />
+          </NavLink>
         </div>
       </nav>
     </div>

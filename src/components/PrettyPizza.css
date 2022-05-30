@@ -161,6 +161,14 @@ nav {
   border-radius: 2em;
 }
 
+.pizzaCardContent button {
+  padding: 0.5em;
+  border: 1px solid black;
+}
+.pizzaCardContent button:hover {
+  box-shadow: 20px 20px 50px #9b2226;
+}
+
 /* footer */
 .footer-info nav{
   background-color: rgba(17, 16, 16, 0.88);
