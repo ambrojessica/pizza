@@ -169,7 +169,21 @@ nav {
   box-shadow: 20px 20px 50px #9b2226;
 }
 
+/*checkout */
+.cart {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/*submit page*/
+
 /* footer */
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
 .footer-info nav{
   background-color: rgba(17, 16, 16, 0.88);
   margin-top: 3em;
