@@ -173,17 +173,13 @@ nav {
 .cart {
   display: flex;
   justify-content: center;
-  align-items: stretch;
+  align-items: center;
+  flex-direction: column;
 }
 
 /*submit page*/
 
 /* footer */
-#footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
 .footer-info nav{
   background-color: rgba(17, 16, 16, 0.88);
   margin-top: 3em;

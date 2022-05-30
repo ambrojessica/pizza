@@ -17,7 +17,9 @@ const App = (props) => {
   };
 
   const removeFromCart = (pizza) => {
-    setCart(cart.filter((p) => p.id !== pizza.id));
+    setCart(cart.filter((p) => {
+      return p.id !== pizza.id;
+    }));
   };
 
   return (
