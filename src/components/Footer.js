@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className="footer-info" id="footer">
       <nav>
-        <img src="https://images.unsplash.com/photo-1542866788-0868e62ae8e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" />
+        <img src="https://images.unsplash.com/photo-1542866788-0868e62ae8e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" alt="pizza flying on top of a table" />
         <div className="nav-info">
           <h3>Contact Us</h3>
           <address>

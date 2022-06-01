@@ -12,8 +12,16 @@ const App = (props) => {
 
   const [cart, setCart] = useState([]);
 
-  const addToCart = (pizza) => {
+  const addToCart = (pizza, id) => {
     setCart([...cart, pizza]);
+    const check_index = cart.findIndex(pizza => pizza.id === id);
+    if (check_index !== -1) {
+      cart[check_index].quantity++;
+      console.log("Quantity updated:", cart);
+    } else {
+      cart.push({ ...cart.find(p => p.id === id), quantity: 1 });
+      console.log('The product has been added to cart:', cart);
+    }
   };
 
   const removeFromCart = (pizza) => {
