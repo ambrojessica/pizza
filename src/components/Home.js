@@ -23,7 +23,7 @@ const Home = () => {
       <div className='story-section'>
         <h3>Our Story</h3>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam laborum, iusto aperiam sed in reiciendis! Aperiam, eum nostrum rerum mollitia cum hic non totam quasi dolore, ea ipsam facilis perspiciatis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum id quaerat repellendus aliquam nesciunt? Nulla ad voluptas blanditiis repudiandae, sint rem et natus eius officiis maiores, quaerat vitae libero recusandae.</p>
-        <button onClick={routeToForm} id='order-pizza'>Order Pizza!</button>
+        <button onClick={routeToForm} id='order-pizza'>Order Now!</button>
       </div>
       <Footer />
     </div>

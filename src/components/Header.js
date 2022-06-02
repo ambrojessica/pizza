@@ -10,7 +10,7 @@ const Header = () => {
         <div className="nav-button">
           <h3>(123)-456-8888</h3>
           <NavLink to="/"><h1>Just Pizza</h1></NavLink>
-          <NavLink to="/cart"><FaCartPlus className='shoppingCart' />
+          <NavLink to="/cart"><span><FaCartPlus className='shoppingCart' /></span>
           </NavLink>
         </div>
       </nav>
