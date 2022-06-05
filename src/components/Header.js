@@ -4,6 +4,7 @@ import './PrettyPizza.css';
 import { FaCartPlus } from 'react-icons/fa';
 
 const Header = () => {
+
   return (
     <div>
       <nav>

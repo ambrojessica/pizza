@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
+import { FaTrashAlt } from 'react-icons/fa';
 
 export default function Cart(props) {
   const total = props.cart.reduce((sum, d) => sum + d.price, 0);
@@ -14,6 +15,8 @@ export default function Cart(props) {
     history.push('/pizza');
   };
 
+  const [count, setCount] = useState(1);
+
   return (
     <div>
       <Header />
@@ -24,15 +27,17 @@ export default function Cart(props) {
             {/* <img src={pizza.image} /> */}
             <h2>{pizza.name}</h2>
             <p>${pizza.price}</p>
+            <button onClick={() => setCount(count + 1)}>+</button>
+            <button onClick={() => { pizza.qty > 1 ? setCount(count - 1) : setCount(1); }}>-</button>
+            <p> x{count}</p>
             <button
-              onClick={() => props.removeFromCart(pizza)}
-            >
-              Remove Pizza
+              onClick={() => props.removeFromCart(pizza)}>
+              <FaTrashAlt />
             </button>
           </div>
         ))}
         <div>
-          <p>Total: ${total}</p>
+          <p>Total: ${(total) * count}</p>
           <button
             onClick={routeToForm}
           >
