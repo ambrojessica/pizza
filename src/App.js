@@ -12,6 +12,7 @@ const App = (props) => {
 
   const [cart, setCart] = useState([]);
 
+
   const addToCart = (pizza, id) => {
     setCart([...cart, pizza]);
     const check_index = cart.findIndex(pizza => pizza.id === id);

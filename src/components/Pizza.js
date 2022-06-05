@@ -4,11 +4,6 @@ import Header from "./Header";
 import Footer from "./Footer";
 
 export default class Pizza extends Component {
-
-  state = {
-    pizza: []
-  };
-
   render() {
     return (
       <section>
@@ -23,7 +18,7 @@ export default class Pizza extends Component {
                     <h3>{pizza.name}</h3>
                     <h5>{pizza.description}</h5>
                     <h4>{pizza.price}</h4>
-                    <button onClick={() => this.props.addToCart(pizza)}>Add To Cart</button>
+                    <button className="cart-button" onClick={() => this.props.addToCart(pizza)}>Add To Cart</button>
                   </div>
                 </div>
               ))

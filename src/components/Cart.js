@@ -5,6 +5,8 @@ import Footer from "./Footer";
 import { FaTrashAlt } from 'react-icons/fa';
 
 export default function Cart(props) {
+
+  const [count, setCount] = useState(1);
   const total = props.cart.reduce((sum, d) => sum + d.price, 0);
 
   const history = useHistory();
@@ -15,7 +17,6 @@ export default function Cart(props) {
     history.push('/pizza');
   };
 
-  const [count, setCount] = useState(1);
 
   return (
     <div>
@@ -36,14 +37,16 @@ export default function Cart(props) {
             </button>
           </div>
         ))}
-        <div>
-          <p>Total: ${(total) * count}</p>
-          <button
-            onClick={routeToForm}
-          >
-            Checkout
-          </button>
-        </div>
+        {
+          total < 1 ? <h3>Cart is Empty</h3> :
+            <div>
+              <p>Total: ${(total) * count}</p>
+              <button className=
+                "checkout-button" onClick={routeToForm}>
+                Checkout
+              </button>
+            </div>
+        }
       </div>
       <Footer />
     </div>
