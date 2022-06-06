@@ -58,7 +58,10 @@ const SubmitPage = () => {
           Zip:
           <input name="zip" value={values.zip} onChange={handleChanges} />
         </label>
-        <button>Checkout</button>
+        {
+          handleSubmit === initialValue ? <p>Need to fill form</p> : <button>Checkout</button>
+        }
+
       </form>
 
       {showSuccessMessage && (
