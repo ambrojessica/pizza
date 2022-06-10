@@ -71,7 +71,6 @@ const SubmitPage = () => {
           </p>
           <p>Your tasty food will be delivered to:</p>
           <br />
-          <br />
           <p>
             {values.firstName} {values.lastName}
           </p>

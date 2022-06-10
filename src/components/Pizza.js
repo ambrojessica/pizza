@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import pizzaData from "./data/pizzaData";
 import Header from "./Header";
 import Footer from "./Footer";
 import 'animate.css';
 import { FaShoppingCart } from "react-icons/fa";
 
-const Pizza = () => {
+const Pizza = (props) => {
+
+  const [showCart, setShowCart] = useState(false);
 
   return (
-    <section>
+    <div>
       <Header />
       <div className="pizzaContainer">
         <div className="pizzaInfo">
@@ -21,8 +23,9 @@ const Pizza = () => {
                   <h5>{pizza.description}</h5>
                   <h4>{pizza.price}</h4>
                   <button className="cart-button"
-                    onClick={() => this.props.addToCart(pizza)}><span>
-                      Add To Cart</span><span><FaShoppingCart /></span>
+                    onClick={() => props.addToCart(pizza) && setShowCart(!showCart)}>
+                    {!showCart ? <FaShoppingCart /> : "Add to Cart"}
+                    <span></span>
                   </button>
                 </div>
               </div>
@@ -31,7 +34,7 @@ const Pizza = () => {
         </div>
       </div>
       <Footer />
-    </section>
+    </div>
   );
 };
 
