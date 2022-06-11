@@ -9,6 +9,11 @@ const Pizza = (props) => {
 
   const [showCart, setShowCart] = useState(false);
 
+  const handleAddToCart = ({ pizza }) => {
+    props.addToCart(pizza);
+    setShowCart(true);
+  };
+
   return (
     <div>
       <Header />
@@ -23,8 +28,8 @@ const Pizza = (props) => {
                   <h5>{pizza.description}</h5>
                   <h4>{pizza.price}</h4>
                   <button className="cart-button"
-                    onClick={() => props.addToCart(pizza) && setShowCart(!showCart)}>
-                    {!showCart ? <FaShoppingCart /> : "Add to Cart"}
+                    onClick={handleAddToCart}>
+                    {showCart ? <FaShoppingCart /> : "Add to Cart"}
                     <span></span>
                   </button>
                 </div>
