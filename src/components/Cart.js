@@ -32,7 +32,7 @@ export default function Cart(props) {
             <button onClick={() => { pizza.qty > 1 ? setCount(count - 1) : setCount(1); }}>-</button>
             <p> x{count}</p>
             <button
-              onClick={() => props.removeFromCart(pizza)}>
+              onClick={() => props.deleteFromCart(pizza)}>
               <FaTrashAlt />
             </button>
           </div>

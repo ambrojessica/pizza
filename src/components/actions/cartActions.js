@@ -1,31 +1,31 @@
-export const addToCart = (product) => {
+export const ADD_TO_CART = 'ADD_TO_CART';
+export const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
+export const ADD_QUANTITY = 'ADD_QUANTITY';
 
+
+export const addToCart = (id) => {
   return {
     type: 'ADD_TO_CART',
     payload: {
-      product,
+      id,
       quantity: 1
     }
   };
 };
 
-export const removeFromCart = (productId) => {
+export const removeFromCart = (id) => {
 
   return {
     type: 'REMOVE_FROM_CART',
-    payload: {
-      productId: productId
-    }
+    id,
   };
 };
 
-export const updateCartQuantity = (productId, quantity) => {
+export const updateCartQuantity = (id) => {
 
   return {
-    type: 'UPDATE_CART_QUANTITY',
-    payload: {
-      productId,
-      quantity: quantity
-    }
+    type: 'ADD_QUANTITY',
+    id,
+    quantity: 1,
   };
 };

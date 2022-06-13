@@ -7,13 +7,17 @@ import SubmitPage from './components/SubmitPage';
 import Cart from './components/Cart';
 import Pizza from './components/Pizza';
 
-
 const App = (props) => {
 
   const [cart, setCart] = useState([]);
-
+  // {
+  //   k25: {...pizza, qty:1}
+  // }
 
   const addToCart = (pizza, id) => {
+    // check if akready in cart => ++ qty
+    // cart?.[pizza.id] = ...qty++
+    // if not, add to cart
     setCart([...cart, pizza]);
     const check_index = cart.findIndex(pizza => pizza.id === id);
     if (check_index !== -1) {
@@ -25,7 +29,7 @@ const App = (props) => {
     }
   };
 
-  const removeFromCart = (pizza) => {
+  const deleteFromCart = (pizza) => {
     setCart(cart.filter((p) => {
       return p.id !== pizza.id;
     }));
@@ -45,7 +49,7 @@ const App = (props) => {
             {...props}
             cart={cart}
             addToCart={addToCart}
-            removeFromCart={removeFromCart}
+            deleteFromCart={deleteFromCart}
           />
         </Route>
 
