@@ -2,8 +2,9 @@ import React from "react";
 import { NavLink } from 'react-router-dom';
 import './PrettyPizza.css';
 import { FaCartPlus } from 'react-icons/fa';
+import { connect } from "react-redux";
 
-const Header = () => {
+const Header = (props) => {
 
   return (
     <div>
@@ -11,7 +12,7 @@ const Header = () => {
         <div className="nav-button">
           <h3>(123)-456-8888</h3>
           <NavLink to="/"><h1>Just Pizza</h1></NavLink>
-          <NavLink to="/cart"><span><FaCartPlus className='shoppingCart' /></span>
+          <NavLink to="/cart"><FaCartPlus className='shoppingCart' /> : {props.qty}
           </NavLink>
         </div>
       </nav>
@@ -19,4 +20,10 @@ const Header = () => {
   );
 };
 
-export default Header;
+const mapStateToProps = state => {
+  return {
+    qty: state.qyt
+  };
+};
+
+export default connect(mapStateToProps, null)(Header);

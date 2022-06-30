@@ -3,29 +3,26 @@ export const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
 export const ADD_QUANTITY = 'ADD_QUANTITY';
 
 
-export const addToCart = (id) => {
+export const addToCart = (payload) => {
   return {
     type: 'ADD_TO_CART',
-    payload: {
-      id,
-      quantity: 1
-    }
+    payload
   };
 };
 
-export const removeFromCart = (id) => {
+export const removeFromCart = (payload) => {
 
   return {
     type: 'REMOVE_FROM_CART',
-    id,
+    payload,
   };
 };
 
-export const updateCartQuantity = (id) => {
+export const updateCartQuantity = (payload) => {
 
   return {
     type: 'ADD_QUANTITY',
-    id,
+    payload,
     quantity: 1,
   };
 };
