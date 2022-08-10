@@ -3,15 +3,10 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import { BrowserRouter as Router } from "react-router-dom";
-import { Provider } from "react-redux";
-import { legacy_createStore as createStore } from 'redux';
-import reducer from './components/reducers/cartReducer';
-const store = createStore(reducer);
 
-ReactDOM.render(<Router>
-  <Provider store={store}>
+ReactDOM.render(
+  <Router>
     <App />
-  </Provider>
-</Router>,
+  </Router>,
   document.getElementById("root")
 );

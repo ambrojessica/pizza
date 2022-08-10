@@ -3,11 +3,10 @@ import './PrettyPizza.css';
 
 const Footer = () => {
   return (
-    <div className="footer-info" id="footer">
-      <nav>
-        <img src="https://images.unsplash.com/photo-1542866788-0868e62ae8e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" alt="pizza flying on top of a table" />
-        <div className="nav-info">
-          <h3>Contact Us</h3>
+    <div className="footer-info" id="contact">
+      <div className="nav-info">
+        <h3>Contact Us</h3>
+        <nav>
           <address>
             123 Mozzarella Ave.
             Los Angeles, California
@@ -16,8 +15,8 @@ const Footer = () => {
           <a href="tel:123-456-8888">123-456-8888</a>
           <a href="mailto:peter.pepperoni@justpizza.com"
           >peter.pepperoni@justpizza.com</a>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </div>
   );
 };

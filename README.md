@@ -1,4 +1,4 @@
-# Just Pizza - Create React App
+# Little Mateo's - E-commerce Pizza Delivery Site
 
 ## Here is the deployed site: 
 https://pizza-blush.vercel.app/
@@ -8,17 +8,6 @@ https://pizza-blush.vercel.app/
 🍕🍕🍕🍕
 
 ## What languages?
-HTML, CSS, JavaScript, Redux and React!
+HTML, CSS, JavaScript, Redux Toolkit and React!
 
-## Figma 
-
-https://www.figma.com/file/X7trG8CAIBVGiPq3xtu6d6/Just-Pizza?node-id=0%3A1
-
-#
-##
-##
-##
-##
-
-This is a mock ecommerce online pizza delivery site. 
 ###### Copyright Jessica Ambrocio 2022 ©

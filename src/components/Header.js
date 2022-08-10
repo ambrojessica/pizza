@@ -1,18 +1,20 @@
 import React from "react";
-import { NavLink } from 'react-router-dom';
 import './PrettyPizza.css';
-import { FaCartPlus } from 'react-icons/fa';
+import { FaCartPlus, FaPhoneAlt } from 'react-icons/fa';
 
-const Header = (props) => {
+const Header = () => {
   return (
     <div>
+      <div className="header">
+        <h3><FaPhoneAlt />+1 (123)-456-8888</h3>
+        <h3>Little Mateo's</h3>
+        <FaCartPlus className='shoppingCart' />
+      </div>
       <nav>
-        <div className="nav-button">
-          <h3>(123)-456-8888</h3>
-          <NavLink to="/"><h1>Little Mateo's</h1></NavLink>
-          <NavLink to="/cart"><FaCartPlus className='shoppingCart' />
-          </NavLink>
-        </div>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
   );
