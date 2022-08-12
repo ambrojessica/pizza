@@ -1,24 +1,72 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export const counterSlice = createSlice({
-  name: "counter",
+const cartSlice = createSlice({
+  name: "cart",
   initialState: {
-    count: 0,
-    price: 0,
+    quantity: 0,
+    cartItems: [],
+    totalAmount: 0,
   },
   reducers: {
-    increment: (state) => {
-      state.count += 1;
-    },
-    decrement: (state) => {
-      if (state.count > 0) {
-        state.count -= 1;
+    addToCart: (state, { payload }) => {
+      const isItemExist = state.cartItems.find(
+        (item) => item.id === payload.id
+      );
+      if (!isItemExist) {
+        state.cartItems = [...state.cartItems, { ...payload, quantity: 1 }];
+      } else {
+        state.cartItems = state.cartItems.map((item) => {
+          if (item.id === payload.id) {
+            return { ...item, quantity: item.quantity + 1 };
+          } else {
+            return item;
+          }
+        });
       }
-    }
-  }
+      state.quantity++;
+      state.totalAmount += payload.price;
+    },
+
+    removeFromCart: (state, { payload }) => {
+      state.cartItems = state.cartItems.filter(
+        (item) => item.id !== payload.id
+      );
+      state.quantity -= payload.quantity;
+      state.totalAmount -= payload.price * payload.quantity;
+    },
+
+    addItemQuantity: (state, { payload }) => {
+      state.cartItems = state.cartItems.map((item) => {
+        if (item.id === payload.id) {
+          return { ...item, quantity: item.quantity + 1 };
+        } else {
+          return item;
+        }
+      });
+      state.quantity++;
+      state.totalAmount += payload.price;
+    },
+
+    subtractItemQuantity: (state, { payload }) => {
+      const subItem = state.cartItems.find((item) => item.id === payload.id);
+      if (subItem.quantity === 1) {
+        state.cartItems = state.cartItems.filter(
+          (item) => item.id !== subItem.id
+        );
+      } else {
+        subItem.quantity -= 1;
+      }
+      state.quantity--;
+      state.totalAmount -= subItem.price;
+    },
+  },
 });
 
-// Action creators are generated for each case reducer function
-export const { increment, decrement } = counterSlice.actions;
+export const {
+  addToCart,
+  removeFromCart,
+  addItemQuantity,
+  subtractItemQuantity,
+} = cartSlice.actions;
 
-export default counterSlice.reducer;
+export default cartSlice.reducer;

@@ -10,7 +10,7 @@ export default function Menu() {
       <div id="menuItem">
         {
           pizzaData.map((pizza) => (
-            <MenuCard pizza={pizza} key={pizza.id} />
+            <MenuCard {...pizza} key={pizza.id} />
           ))
         }
       </div>

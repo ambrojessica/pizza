@@ -1,19 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import './PrettyPizza.css';
-import { FaCartPlus, FaPhoneAlt } from 'react-icons/fa';
-import { useSelector } from "react-redux";
+import { FaPhoneAlt, FaCartPlus } from 'react-icons/fa';
+import Cart from "./Cart";
+import { AiOutlineClose } from 'react-icons/ai';
 
 const Header = () => {
-  const { count } = useSelector((state) => state.counter);
+  const [sidebar, setSidebar] = useState(false);
+
+  const showSidebar = () => setSidebar(!sidebar);
   return (
     <div>
       <div className="header">
         <h3><FaPhoneAlt />+1 (123)-456-8888</h3>
         <h3>Little Mateo's</h3>
-        <span>
-          <FaCartPlus className='shoppingCart' />
-          {count}
-        </span>
       </div>
       <nav>
         <a href="#home">Home</a>
@@ -21,6 +20,19 @@ const Header = () => {
         <a href="#menu">Menu</a>
         <a href="#contact">Contact</a>
       </nav>
+      <div>
+        <span className="menu-bars"><FaCartPlus onClick={showSidebar} /></span>
+        <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
+          <ul className='nav-menu-items' onClick={showSidebar}>
+            <li className='navbar-toggle'>
+              <p className='menu-bars'>
+                <AiOutlineClose />
+              </p>
+            </li>
+            <Cart />
+          </ul>
+        </nav>
+      </div>
     </div>
   );
 };

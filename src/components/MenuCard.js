@@ -1,19 +1,16 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { decrement, increment } from './redux/addToCart';
+import { useDispatch } from 'react-redux';
+import { addToCart } from './redux/addToCart';
 
-export default function MenuCard({ pizza }) {
-  const { count } = useSelector((state) => state.counter);
+export default function MenuCard({ id, description, name, price }) {
   const dispatch = useDispatch();
   return (
     <div>
       {/* image */}
-      <h3>{pizza.name}</h3>
-      <p>{pizza.description}</p>
-      <p>{pizza.price}</p>
-      <p>{count}</p>
-      <button onClick={() => dispatch(increment())}>+</button>
-      <button onClick={() => dispatch(decrement())}>-</button>
+      <h3>{name}</h3>
+      <p>{description}</p>
+      <p>{price}</p>
+      <button onClick={() => dispatch(addToCart({ id, description, name, price }))}>Add To Cart</button>
     </div>
   );
 }
