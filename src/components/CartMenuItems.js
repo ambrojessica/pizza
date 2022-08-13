@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { GrSubtractCircle, GrAddCircle } from 'react-icons/gr';
+import { GrSubtractCircle, GrAddCircle, GrTrash } from 'react-icons/gr';
 import { addItemQuantity, removeFromCart, subtractItemQuantity } from "./redux/addToCart";
 
 
@@ -14,7 +14,7 @@ const CartMenuItems = (props) => {
         <p>{description}</p>
         <p>${price}</p>
         <button onClick={() => dispatch(removeFromCart(props))}>
-          Remove from cart
+          <GrTrash />
         </button>
         {/* buttons */}
         <div className="quantity">

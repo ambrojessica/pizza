@@ -3,11 +3,13 @@ import './PrettyPizza.css';
 import { FaPhoneAlt, FaCartPlus } from 'react-icons/fa';
 import Cart from "./Cart";
 import { AiOutlineClose } from 'react-icons/ai';
+import { useSelector } from "react-redux";
 
 const Header = () => {
+  const { quantity } = useSelector((state) => state.cart);
   const [sidebar, setSidebar] = useState(false);
-
   const showSidebar = () => setSidebar(!sidebar);
+
   return (
     <div>
       <div className="header">
@@ -21,7 +23,10 @@ const Header = () => {
         <a href="#contact">Contact</a>
       </nav>
       <div>
-        <span className="menu-bars"><FaCartPlus onClick={showSidebar} /></span>
+        <span className="menu-bars">
+          {quantity !== 0 && <span>{quantity}</span>}
+          <FaCartPlus onClick={showSidebar} />
+        </span>
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
           <ul className='nav-menu-items' onClick={showSidebar}>
             <li className='navbar-toggle'>
