@@ -5,11 +5,12 @@ import { addItemQuantity, removeFromCart, subtractItemQuantity } from "./redux/a
 
 const CartMenuItems = (props) => {
   const dispatch = useDispatch();
-  const { name, description, price, quantity } = props;
+  const { image, name, description, price, quantity } = props;
 
   return (
-    <div>
-      <div>
+    <div className="cart-menu-item">
+      <div className="cart-item">
+        <img src={image} alt='pizza' />
         <h3>{name}</h3>
         <p>{description}</p>
         <p>${price}</p>

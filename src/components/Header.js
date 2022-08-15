@@ -23,17 +23,15 @@ const Header = () => {
           <a href="#contact">Contact</a>
         </nav>
       </div>
-      <div>
+      <div className="navbar">
         <span className="menu-bars">
-          {quantity !== 0 && <span>{quantity}</span>}
+          {quantity ? <span>{quantity}</span> : <span>Ø</span>}
           <BsCart4 onClick={showSidebar} />
         </span>
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
           <ul className='nav-menu-items' onClick={showSidebar}>
             <li className='navbar-toggle'>
-              <p className='menu-bars'>
-                <AiOutlineClose />
-              </p>
+              <AiOutlineClose />
             </li>
             <Cart />
           </ul>

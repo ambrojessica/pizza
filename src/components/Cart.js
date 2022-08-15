@@ -9,7 +9,7 @@ export default function Cart() {
     return <h2 className="no-items">No items in cart...</h2>;
   }
   return (
-    <div>
+    <div className="cart">
       <h2>Cart Items</h2>
       {
         cartItems.map((item) => (
