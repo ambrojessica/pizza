@@ -6,6 +6,9 @@ import Header from './components/Header';
 import Home from './components/Home';
 import Menu from './components/Menu';
 import Reviews from './components/Reviews';
+import './components/PrettyPizza.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const App = () => {
 

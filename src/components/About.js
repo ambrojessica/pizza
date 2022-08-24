@@ -1,13 +1,16 @@
 import React from 'react';
+import './PrettyPizza.css';
 
 export default function About() {
   return (
     <div id='about'>
-      <h3>About Us</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet turpis quis augue finibus vestibulum. Curabitur dapibus elementum felis, ac consectetur risus cursus vitae. Fusce congue ante sed finibus pretium. Nunc non posuere augue. </p>
-      {/* border */}
-      <p>Nam ultrices enim lorem, aliquet ultrices quam tincidunt ut. In id dignissim velit. Cras in blandit odio. Nulla at consectetur eros, id aliquet lacus. Duis ac blandit urna. Nullam sit amet risus id dui iaculis accumsan nec quis risus. Sed et urna ipsum. Vivamus eu elementum lectus. In volutpat nulla elit, et pellentesque dui molestie in. Vestibulum feugiat fringilla condimentum. Vestibulum eget mauris lobortis, porta felis a, pellentesque ex. Mauris a velit ex. Aenean pulvinar dolor et nunc fermentum suscipit. Phasellus at nulla accumsan, scelerisque odio ut, ullamcorper lorem.</p>
-      {/* image */}
+      <div className='about-content'>
+        <h3>Get to Know Us</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet turpis quis augue finibus vestibulum.</p>
+        <hr></hr>
+        <p>Nam ultrices enim lorem, aliquet ultrices quam tincidunt ut. In id dignissim velit. Cras in blandit odio. Nulla at consectetur eros, id aliquet lacus.</p>
+      </div>
+      <img src='https://images.unsplash.com/photo-1600628421060-939639517883?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80' alt='family eating pizza' />
     </div>
   );
 }

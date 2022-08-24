@@ -1,12 +1,13 @@
 import React from 'react';
 import { BsStarFill, BsStarHalf } from 'react-icons/bs';
+import './PrettyPizza.css';
 
 export default function Reviews() {
   return (
-    <div>
+    <div className='reviews'>
       <h3>Hear from our clients!</h3>
       {/* carousel of reviews */}
-      <div>
+      <div className='review-carousel'>
         <span><BsStarFill /><BsStarFill /><BsStarFill /><BsStarFill /><BsStarFill /></span>
         <p>"Greatest local pizza. I go every Friday with my family and they have not messed up an order once! I always go to Little Mateo's the staff are always friendly and have fast service.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet turpis quis augue finibus vestibulum. "</p>
 
