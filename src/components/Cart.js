@@ -10,14 +10,15 @@ export default function Cart() {
   }
   return (
     <div className="cart">
-      <h2>Cart Items</h2>
+      <h2>Your Cart Items</h2>
       {
         cartItems.map((item) => (
           <CartMenuItems key={item.id} {...item} />
         ))
       }
+      <p>Shipping and Handling: Free</p>
       <h3>Total Amount: ${totalAmount.toFixed(2)}</h3>
-      <button onClick={() => alert('No checkout yet. Thank you for visiting Little Mateos')}>Checkout</button>
+      <button className="checkout" onClick={() => alert('Working on checkout. Thank you for visiting Little Mateos')}>Proceed to Checkout</button>
     </div >
   );
 };

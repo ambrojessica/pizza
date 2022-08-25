@@ -1,32 +1,29 @@
 import { useDispatch } from "react-redux";
-import { GrSubtractCircle, GrAddCircle, GrTrash } from 'react-icons/gr';
 import { addItemQuantity, removeFromCart, subtractItemQuantity } from "./redux/addToCart";
+import { AiOutlineClose } from "react-icons/ai";
 
 
 const CartMenuItems = (props) => {
   const dispatch = useDispatch();
-  const { image, name, description, price, quantity } = props;
+  const { image, name, price, quantity } = props;
 
   return (
-    <div className="cart-menu-item">
-      <div className="cart-item">
-        <img src={image} alt='pizza' />
-        <h3>{name}</h3>
-        <p>{description}</p>
-        <p>${price}</p>
-        <button onClick={() => dispatch(removeFromCart(props))}>
-          <GrTrash />
+    <div className="cart-item">
+      <span onClick={() => dispatch(removeFromCart(props))}>
+        <AiOutlineClose />
+      </span>
+      <img src={image} alt='pizza' />
+      <h3>{name}</h3>
+      <p>${price}</p>
+      {/* buttons */}
+      <div className="quantity">
+        <button onClick={() => dispatch(subtractItemQuantity(props))}>
+          -
         </button>
-        {/* buttons */}
-        <div className="quantity">
-          <button onClick={() => dispatch(subtractItemQuantity(props))}>
-            <GrSubtractCircle />
-          </button>
-          <p>{quantity}</p>
-          <button onClick={() => dispatch(addItemQuantity(props))}>
-            <GrAddCircle />
-          </button>
-        </div>
+        <p>{quantity}</p>
+        <button onClick={() => dispatch(addItemQuantity(props))}>
+          +
+        </button>
       </div>
     </div>
   );

@@ -5,6 +5,8 @@ import { AiOutlineClose } from 'react-icons/ai';
 import { useSelector } from 'react-redux';
 import { BsCart4, BsPhone } from 'react-icons/bs';
 import { GiFullPizza } from 'react-icons/gi';
+import Popup from 'reactjs-popup';
+
 
 const Header = () => {
   const { quantity } = useSelector((state) => state.cart);
@@ -24,18 +26,21 @@ const Header = () => {
         </nav>
       </div>
       <div className="navbar">
-        <span className="menu-bars">
-          {quantity ? <span>{quantity}</span> : <span>Ø</span>}
-          <BsCart4 onClick={showSidebar} />
-        </span>
-        <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-          <ul className='nav-menu-items' onClick={showSidebar}>
-            <li className='navbar-toggle'>
-              <AiOutlineClose />
-            </li>
-            <Cart />
-          </ul>
-        </nav>
+        <Popup
+          trigger={<button className="menu-bars">{quantity ? <span>{quantity}</span> : <span>Ø</span>}
+            <BsCart4 onClick={showSidebar} /> </button>}
+          modal
+          nested
+        >
+          {close => (
+            <div className="modal">
+              <button className="close" onClick={close}>
+                <AiOutlineClose />
+              </button>
+              <Cart />
+            </div>
+          )}
+        </Popup>
       </div>
     </div>
   );

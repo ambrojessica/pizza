@@ -16,6 +16,7 @@
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^5.2.0",
     "react-scripts": "5.0.0",
+    "reactjs-popup": "^2.0.5",
     "redux": "^4.2.0",
     "terser": "^5.14.2",
     "web-vitals": "^2.1.3"
