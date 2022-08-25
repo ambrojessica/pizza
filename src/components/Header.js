@@ -12,7 +12,7 @@ const Header = () => {
   const showSidebar = () => setSidebar(!sidebar);
 
   return (
-    <div className="header-section">
+    <div className="header-section" id='home'>
       <h3><BsPhone />+1 (123)-456-8888</h3>
       <div className="header-title">
         <h3>Little Mateo's <GiFullPizza /></h3>

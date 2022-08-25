@@ -8,6 +8,7 @@ export default function Reviews() {
   return (
     <div className='reviews'>
       <h3>Hear from our clients!</h3>
+      <hr />
       <div className='carousel-wrapper'>
         <Carousel infiniteLoop autoPlay showThumbs={false}>
           <div className='review-carousel'>
