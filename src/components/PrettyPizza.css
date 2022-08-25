@@ -145,7 +145,6 @@ body {
   display: flex;
   justify-content: flex-end;
   padding-right: 10em;
-  margin-top: 5em;
   align-items: center;
   height: 50vh;
   background-image: url('https://images.unsplash.com/photo-1581873372796-635b67ca2008?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
@@ -292,9 +291,27 @@ hr {
 
 /* reviews */
 .reviews {
-  border: 1px solid green;
+  margin-top: 10em;
+  margin-bottom: 7em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviews h3 {
+  font-size: 25px;
+}
+
+.carousel-wrapper {
+  width: 60%;
+  padding: 2em;
+  border: 7px double #b6353b;
 }
 
 .review-carousel {
-  border: 1px solid yellow;
+  padding: 2em;
 }
+
+/* footer */
+
