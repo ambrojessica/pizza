@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/ambrojessica/pizza">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="src/components/images/pizza.png" alt="Logo" width="500" height="500">
   </a>
 
 <h3 align="center">Ecommerce Restaurant</h3>
@@ -51,14 +51,16 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<div align="center">
+<img src="src/components/images/reactredux.jpg" alt="Logo" width="100" height="100">
+</div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 ### Built With
 
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+  ![React](https://img.shields.io/badge/-React-333333?style=flat&logo=react)
   ![CSS](https://img.shields.io/badge/-CSS-333333?style=flat&logo=CSS3&logoColor=1572B6)
 
 
