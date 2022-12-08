@@ -27,10 +27,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
+      <a href="#about-the-project">About The Project & Built With</a>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
@@ -49,23 +46,14 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## About The Project & Built With
 
 <div align="center">
-<img src="src/components/images/reactredux.jpg" alt="Logo" width="100" height="100">
+<img src="src/components/images/reactredux.png" alt="Logo" width="300" height="300">
+  <p>This site was created using React and Redux Toolkit. <br /> For styling, Vanilla CSS. </p>
 </div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-### Built With
-
-  ![React](https://img.shields.io/badge/-React-333333?style=flat&logo=react)
-  ![CSS](https://img.shields.io/badge/-CSS-333333?style=flat&logo=CSS3&logoColor=1572B6)
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- GETTING STARTED -->
